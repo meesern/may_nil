@@ -10,19 +10,21 @@ Ruby method chaining without worrying about nils
     require 'may_nil'
 
 If we have some data...
- 
-     a = {person: {name: 'Bob', pet: { likes: ['cat', 'dog', 'mouse'], owns: 'dog' } } }
-     may_nil {a[:person][:pet][:owns]}                                                      => 'dog'
-     
-     a = {person: {name: 'Bob', pet: { likes: ['cat', 'dog', 'mouse'] } } }
-     may_nil {a[:person][:pet][:owns]}                                                      =>  nil
-     
-     a = {person: {name: 'Bob' } }
-     may_nil {a[:person][:pet][:owns]}                                                      =>  nil
-     
-     a = nil
-     may_nil {a[:person][:pet][:owns]}                                                      =>  nil
 
+    a = {person: {name: 'Bob',  pet: { likes: ['cat', 'dog', 'mouse'], owns: 'dog' } } }
+    b = {person: {name: 'Bill', pet: { likes: ['cat', 'dog', 'mouse'] } } }
+    c = {person: {name: 'Brian' } }
+    d = nil
+    
+    def owns_pet( data )
+      may_nil {a[:person][:pet][:owns]}
+    end
+    
+    owns_pet(a)   => 'dog'
+    owns_pet(b)   =>  nil
+    owns_pet(c)   =>  nil
+    owns_pet(d)   =>  nil
+    
 Or a method chain...
 
     nil.foo.bar[2].baz             => Exception: NoMethodError (foo on NilClass)

@@ -3,7 +3,7 @@ Ruby method chaining without worrying about nils
 
 ## What?
 
-`may_nil` allows us to write ruby method chains that succinctly handle nil anywhere in the chain.
+`may_nil` allows us to write ruby method chains that succinctly handle nil anywhere in the chain.  Within the block passed to `may_nil` any undefined method on the NilClass termiates the block returning nil.  All exceptions other than NoMethodError on NilClass are raised as usual. 
 
 ## Examples
 

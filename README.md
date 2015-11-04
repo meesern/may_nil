@@ -15,6 +15,21 @@ A typical use case is for exploring deeply nested structures such as parsed JSON
     may_nil {nil.foo.bar[2].baz}   => nil
     may_nil {100.foo.bar[2].baz}   => Exception: NoMethodError (foo on Fixnum)
 
+    class Fixnum
+      def foo(v) 
+        v+1
+      end
+      def bar(v)
+        [v]
+      end
+      def baz(v)
+        v.to_s
+      end
+    end
+    may_nil {1.foo.bar[0].baz}    => "2"
+    may_nil {1.foo.bar[1].baz}    => nil
+    
+
 ## Installing
 
   

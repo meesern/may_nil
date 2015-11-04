@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.description = "Method chain to your heart's content"
   s.authors     = ["Rue Meese"]
   s.email       = 'rupert.meese@lightmind.co.uk'
-  s.files       = ["lib/maynil.rb"]
+  s.files       = ["lib/may_nil.rb"]
   s.homepage    = 'https://github.com/meesern/may_nil'
   s.license       = 'MIT'
 end

@@ -1,4 +1,3 @@
-
 #
 # Usage: 
 #   require 'may_nil'

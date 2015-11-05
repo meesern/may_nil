@@ -17,7 +17,7 @@ If we have some data...
     d = nil
     
     def owns_pet( data )
-      may_nil {a[:person][:pet][:owns]}
+      may_nil {data[:person][:pet][:owns]}
     end
     
     owns_pet(a)   => 'dog'

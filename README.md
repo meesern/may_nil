@@ -50,7 +50,8 @@ Or a method chain...
 
 ### Gemfile
  
-    gem 'may_nil'
+    gem 'may_nil', :git => 'https://github.com/meesern/may_nil.git'
+
     
 ## Why?
 

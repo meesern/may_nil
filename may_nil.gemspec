@@ -1,8 +1,8 @@
 
 Gem::Specification.new do |s|
   s.name        = 'may_nil'
-  s.version     = '0.0.0'
-  s.date        = '2015-11-04'
+  s.version     = '0.0.1'
+  s.date        = '2015-11-05'
   s.summary     = "May Nil"
   s.description = "Method chain to your heart's content"
   s.authors     = ["Rue Meese"]

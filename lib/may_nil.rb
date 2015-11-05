@@ -8,9 +8,9 @@
 #
 
 def may_nil &blk
-  call blk
+  blk.call
 rescue NoMethodError => e
-  raise unless e.missing_name != "NilClass"
+  raise if e.missing_name != "NilClass"
   nil 
 end
 
